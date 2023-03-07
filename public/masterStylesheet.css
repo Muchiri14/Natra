@@ -1,0 +1,102 @@
+#flash {
+    padding: 1rem;
+    background: #EEE;
+    border-radius: 10px;
+}
+input {
+    padding: .5rem;
+}
+html, input, a {
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    color: black;
+    transition: .5s;
+}
+input {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+input:focus {
+    outline: none;
+}
+.container {
+    height: 80%;
+    display: flex;
+}
+.loginBtn, .signUpBtn {
+    text-align: center;
+    width: -webkit-fill-available;
+    height: calc(-webkit-fill-available);
+    background: lightgray;
+}
+.loginBtn:hover {
+    background: lightgreen;
+    color: white;
+    transition: .5s;
+}
+.signUpBtn:hover {
+    background: lightskyblue;
+    color: white;
+    transition: .5s;
+}
+.homeBtn {
+    transition: .4s;
+    background: #666;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.homeBtn:hover {
+    transition: .4s;
+    background: rgb(158, 157, 157);
+}
+.button {
+    transition: .4s;
+    background: #666;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: .75em;
+}
+.button:hover {
+    transition: .4s;
+    background: rgb(158, 157, 157);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #ffa2e3;
+    border-radius: 10px;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}  
+tr {
+    transition: .4s;
+}
+tr:hover {
+    transition: .4s;
+    background-color:#f5f5f5;
+}

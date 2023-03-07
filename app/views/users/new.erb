@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CMS Task Manager</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background: lightgreen">
+	<center>
+		<% unless locals.empty? %>
+		<h1><%= message %></h1>
+		<% end %>
+		<br />
+		<br />
+		<form action="/signup" method="POST">
+			<label for="username">Username</label>
+			<input type="text" name="username">
+			<br />
+			<br />
+			<label for="email">Email</label>
+			<input type="text" name="email">
+			<br />
+			<br />
+			<label for="password">Password</label>
+			<input type="text" name="password">
+			<br />
+			<br />
+			<input class="button" type="submit" value="Create Account">
+		</form>
+	</center>
+</body>
+
+</html>

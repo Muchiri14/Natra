@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CMS Task Manager</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background: lightyellow">
+	<center>
+		<a class="button" style="float: left" href="/projects/<%= @project.id %>/delete">Delete</a>
+		<a class="button" style="float: right" href="/tasks/new">Add Task</a>
+		<a class="button" style="float: right" href="/projects/<%= @project.id %>/edit">Edit</a>
+		<h1>Project: <em><%= @project.name %></em></h1>
+		<table>
+			<tr>
+				<th>Task Name</th>
+				<th>Complete</th>
+				<th>Due Date</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<% @project.project_tasks.each do |t| %>
+			<tr>
+				<td><em><a href="/tasks/<%= t.id %>"><%= t.name %></a></em></td>
+				<td>
+					<%if t.complete == true %>
+					<input type="checkbox" disabled="disabled" checked %>
+					<%else%>
+					<input type="checkbox" disabled="disabled" />
+					<%end%>
+				</td>
+				<td>
+					<p><%=t.due_date%></p>
+				</td>
+				<td>
+					<a class="button" style="padding: 5px; margin: 0" href="/tasks/<%= t.id %>/edit">Edit</a>
+				</td>
+				<td>
+					<a class="button" style="padding: 5px; margin: 0" href="/tasks/<%= t.id %>/delete">Delete</a>
+				</td>
+			</tr>
+			<% end %>
+		</table>
+	</center>
+</body>
+
+</html>

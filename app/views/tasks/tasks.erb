@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CMS Task Manager</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background: lightblue">
+	<h1>My Tasks...</h1>
+	<table>
+		<tr>
+			<th>Task</th>
+			<th>Complete</th>
+			<th>Due Date</th>
+			<th>Project</th>
+			<th></th>
+			<th></th>
+		</tr>
+		<% @my_tasks.each do |t| %>
+		<tr>
+			<td>
+				<em><a href="/tasks/<%=t.id%>"><%= t.name %></a></em>
+			</td>
+			<td>
+				<%if t.complete == true %>
+				<input type="checkbox" disabled="disabled" checked %>
+				<%else%>
+				<input type="checkbox" disabled="disabled" />
+				<%end%>
+			</td>
+			<td>
+				<p><%= t.due_date %></p>
+			</td>
+			<td>
+				<em><a href="/projects/<%= t.project.id %>"><%= t.project.name %></a></em>
+			</td>
+			<td>
+				<a class="button" style="padding: 5px; margin: 0" href="/tasks/<%= t.id %>/edit">Edit</a>
+			</td>
+			<td>
+				<a class="button" style="padding: 5px; margin: 0" href="/tasks/<%= t.id %>/delete">Delete</a>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</body>
+
+</html>
